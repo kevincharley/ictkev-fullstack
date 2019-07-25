@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>operations</title>
+    <script>
+        function gn()
+        {
+var x=parseInt(document.getElementById("n1").value);
+var y=parseInt(document.getElementById("n2").value);
+var opt=document.getElementById("op").value;
+if(opt=="add")
+{
+   u= add(x,y);
+   console.log(u);
+    document.getElementById("r").innerHTML="<b>"+u+"</b>";
+}
+if(opt=="sub")
+{
+    u=sub(x,y);
+    document.getElementById("r").innerHTML="<b>"+u+"</b>";
+}
+if(opt=="mul")
+{
+    u=mul(x,y);
+    document.getElementById("r").innerHTML="<b>"+u+"</b>";
+}
+if(opt=="div")
+{
+    u=div(x,y);
+    document.getElementById("r").innerHTML="<b>"+u+"</b>";
+}
+function add(x,g)
+{
+    z=x+g;
+    return(z);
+}
+function sub(x,y)
+{
+    s=x-y;
+    return(s);
+}
+function mul(x,y)
+{
+    s=x*y;
+    return(s);
+}
+function div(x,y)
+{
+    s=x/y;
+    return(s)
+}
+}
+    
+
+    </script>
+</head>
+<body>
+    <table class="table">
+    <tr>
+            <td><label for="" class="lb">number1</label></td>
+            <td><input type="text" class="form-control" id="n1"></td>
+        </tr>
+        <tr>
+            
+                    <td><label for="" class="lb">number2</label></td>
+                    <td><input type="text" class="form-control" id="n2"></td>
+            
+        </tr>
+        <tr>
+            <td>operation</td>
+
+        <td><select class="form-control" name="branch" id="op" onchange="gn();">
+            <option value="">select</option>
+            <option value="add">add</option>
+            <option value="sub">sub</option>
+            <option value="div">div</option>
+            <option value="mul">mul</option>
+        </select></td></tr>
+       
+        <tr><td id="r"></td></tr>
+    </table>
+
+</body>
+</html>
