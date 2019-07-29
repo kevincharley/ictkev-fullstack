@@ -1,0 +1,9 @@
+.bor{
+    border: 2px solid black;
+    margin-left: 10px;
+    margin-top: 200px;
+}
+.clr{color: rgb(140, 250, 14);background:rgb(159, 159, 207)}
+        body{background:url('../lambo.webp');}
+        .di{border-radius: 100%}
+        
